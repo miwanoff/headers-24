@@ -11,7 +11,7 @@
     <?php
 echo "<h1>About</h1>";
 ?>
-    <p>Hello, <?= $_GET["name"];?>! You were born on <?= $_GET["date"];?>!</p>
+    <p>Hello, <?= $_POST["name"];?>! You were born on <?= $_POST["date"];?>!</p>
 </body>
 
 </html>
