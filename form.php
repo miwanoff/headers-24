@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form action="script.php" method="POST">
+    <form action="script.php" method="GET">
         Input your name: <input type="text" name="name" value=""><br />
         Input your date of birth: <input type="text" name="date" value=""><br />
         <input type=submit value="Send" />
