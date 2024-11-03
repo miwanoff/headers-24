@@ -25,7 +25,17 @@ if (isset($_POST['submit'])) {
 
     echo "<p><b>" . $result_answer . "</b></p>";
     $course = $_POST['course'];
-    echo $course;
+    echo "$course<br>";
+    $courses = $_POST['courses'];
+    foreach ($courses as $item) {
+        echo "$item<br>";
+    }
+    echo "technologies:<br/>";
+    $technologies = $_POST['technologies'];
+    foreach ($technologies as $item) {
+        echo "$item<br />";
+    }
+
 }
 ?>
     <form method="post" action="<?=$_SERVER['PHP_SELF']?>" method="POST">
@@ -40,6 +50,17 @@ if (isset($_POST['submit'])) {
             <option value="Ruby">RUBY</option>
             <option value="Python">Python</option>
         </select><br />
+        <label for='courses[]'>Виберіть курс: </label> <br />
+        <select name="courses[]" size="4" multiple="multiple">
+            <option value="ASP.NET">ASP.NET</option>
+            <option value="PHP">PHP</option>
+            <option value="Ruby">RUBY</option>
+            <option value="Python">Python</option>
+        </select><br />
+        ASP.NET: <input type="checkbox" name="technologies[]" value="ASP.NET" />
+        PHP: <input type="checkbox" name="technologies[]" value="PHP" />
+        RUBY: <input type="checkbox" name="technologies[]" value="Ruby" /><br />
+
         <input type="submit" name="submit" value="Submit Data" />
     </form>
 </body>
