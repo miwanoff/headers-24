@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
     echo "Your Message is:" . $_POST["Message"];
 }
 ?>
-    <form action="form_process.php" method="POST">
+    <form action="<?= $_SERVER['PHP_SELF']?>" method="POST">
         First Name:<br />
         <input type="text" name="FName" /><br />
         Last Name:<br /> <input type="text" name="LName" /><br />
